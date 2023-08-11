@@ -29,6 +29,22 @@ It should give an ability to:
 - Start count down procedure - await for response of wether device has dispatched a key.
 - Read if a device is available/online.
 
+## Use
+
+### Env
+
+![Screen Shot 2023-08-11 at 1.21.49 PM.png](https://raw.githubusercontent.com/Edvinas1122/Edvinas1122/main/tutorials/bicycle-backend-env.png)
+
+The application demands following environment variables
+
+```
+NOTION_API_TOKEN=secter_YOURTOKENHERE235324ntn43t
+ROOT_PAGE_ID=
+... more in development
+```
+
+To acquire notion api key you must obtain it here: [LINK](https://www.notion.so/my-integrations), you can read more about notion integrations [here](https://developers.notion.com/docs/create-a-notion-integration).
+
 ## Development
 
 Any new interface features shall be documented.
