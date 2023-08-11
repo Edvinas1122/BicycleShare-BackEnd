@@ -14,7 +14,6 @@ export const notionAPIConfig = (
     authToken: string,
     rootPageDir: string,
 ): APIInfo => ({
-    name: 'NotionAPI',
     apiBaseUrl: 'https://api.notion.com/v1/',
     headers: {
         'Notion-Version': '2022-06-28',

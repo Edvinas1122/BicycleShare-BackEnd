@@ -5,11 +5,11 @@ import { ConfigModule } from '@nestjs/config';
 import { NotionModule } from './notion-api/api.module';
 
 @Module({
-  imports: [
-    ConfigModule.forRoot(),
-    NotionModule,
-  ],
-  controllers: [AppController],
-  providers: [AppService],
+	imports: [
+		ConfigModule.forRoot(),
+		NotionModule,
+	],
+	controllers: [AppController],
+	providers: [AppService],
 })
 export class AppModule {}

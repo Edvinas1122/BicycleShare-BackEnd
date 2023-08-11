@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
-import NotionService from './api.service';
 import NotionAPI from './api';
+import NotionService from './api.service';
 
 @Module({
   imports: [],
 //   controllers: [AppController],
-  providers: [NotionService, NotionAPI,  ],
+  providers: [NotionAPI, NotionService],
   exports: [NotionService],
 })
 export class NotionModule {}
