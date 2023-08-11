@@ -1,19 +1,13 @@
 import { Injectable } from '@nestjs/common';
-// import NotionAPI from './notion-api/api';
-import NotionService from './notion-api/api.service';
+import BicycleShareContentService from './content-service/content.service';
 
 @Injectable()
 export class AppService {
 	constructor(
-		private api: NotionService,
+		private content: BicycleShareContentService,
 	) {}
 
-	getHello(): string {
-		return 'Hello Worlda!';
+	async getContent(content: string): Promise<any> {
+		return this.content.map(content);
 	}
-
-	async getTermsAndConditions(): Promise<any> {
-		return this.api.getBlock();
-	}
-
 }

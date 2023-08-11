@@ -4,7 +4,6 @@ import NotionService from './api.service';
 
 @Module({
   imports: [],
-//   controllers: [AppController],
   providers: [NotionAPI, NotionService],
   exports: [NotionService],
 })
