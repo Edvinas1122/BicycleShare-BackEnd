@@ -1,8 +1,9 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
 import NotionService from "@src/notion-api/api.service";
+import NotionContentService from "./notion-content.service";
 
 /*
-	Provides RAW data from Expected (Bicycle Share Template) template
+	Provides RAW data from Expected (Bicycle Share Template) notion templated page
 
 */
 
@@ -17,6 +18,7 @@ enum Content {
 export default class BicycleShareContentService {
 	constructor(
 		private apiService: NotionService,
+		private notionContentService: NotionContentService,
 	) {}
 
 	async map(content: string): Promise<any> {
@@ -52,13 +54,12 @@ export default class BicycleShareContentService {
 
 	private async getContent(id?: string): Promise<any> {
 		if (!id) throw new NotFoundException("No page found");
-		console.log("id", id);
-		return this.apiService.getBlockChildren(id);
+		// return this.apiService.getBlockChildren(id);
+		return this.notionContentService.getPageContent(id);
 	}
 
 	private async getDatabase(id?: string): Promise<any> {
 		if (!id) throw new NotFoundException("No database found");
-		console.log("id", id);
 		return this.apiService.queryDatabase(id);
 	}
 }

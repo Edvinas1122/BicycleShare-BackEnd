@@ -20,7 +20,6 @@ export default class NotionService {
 	}
 
 	async getBlockChildren(blockId?: string) {
-		console.log("blockId", blockId);
 		return this.api.getBlockChildren({
 			params: blockId ? { blockId: blockId } : undefined,
 		});

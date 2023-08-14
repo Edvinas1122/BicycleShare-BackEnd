@@ -1,5 +1,9 @@
 import { APIInfo } from '@edvinas1122/api_wrapper';
 
+/* 
+    https://developers.notion.com/reference/intro
+*/
+
 export enum NotionEndpoints {
     getPage = 'getPage',
     getBlockChildren = 'getBlockChildren',
